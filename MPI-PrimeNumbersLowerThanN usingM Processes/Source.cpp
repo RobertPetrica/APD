@@ -41,7 +41,7 @@ Else return start
 */
 	{
 		bool isPrim = true;
-		for (int div = 2; div <= number / 2; ++div)
+		for (int div = 2; div <= number / 2; div++)
 			if (number % div == 0)//restul impartirii
 			{
 				isPrim = false;
