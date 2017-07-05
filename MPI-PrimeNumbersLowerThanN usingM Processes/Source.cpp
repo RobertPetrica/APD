@@ -57,7 +57,7 @@ Else return start
 }
 
 
-//int n; // Numarul de testat pentru a se vedea daca este prim.
+int n; // Numarul de testat pentru a se vedea daca este prim.
 int i; // Contorul de cicluri.
 int is_prime; // Indicator Boolean.
 // Presupune ca un numar este prim pana la proba contrarie.
