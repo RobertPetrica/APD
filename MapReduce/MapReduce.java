@@ -1,3 +1,5 @@
+//daca un sir de 2 cuvinte exista intr-un text Si sa contorizam nr de aparitii
+
 import java.io.IOException;
 import java.util.StringTokenizer;
 
