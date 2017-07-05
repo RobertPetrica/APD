@@ -55,3 +55,28 @@ Else return start
 		}
 	}
 }
+
+
+//int n; // Numarul de testat pentru a se vedea daca este prim.
+int i; // Contorul de cicluri.
+int is_prime; // Indicator Boolean.
+// Presupune ca un numar este prim pana la proba contrarie.
+is_prime = true;
+// Obtine un numar de la tastatura.
+cout <>n;
+// Se verifica daca numarul este prim sau nu, testand divizibilitatea cu toate numerele intregi cuprinse intre 2 si sqrt (n).
+i = 2;
+while(i <= sqrt(static_cast(n)))
+{
+// Cat timp este mai mic sau egal cu sqrt(n).
+if (n%i==0) // Daca n se imparte exact la i.
+is_prime=false; // n nu este prim.
+i++; // Adauga 1 la i.
+}
+// Listeaza rezultatul.
+if(is_prime)
+cout <<"Numarul este prim.";
+else
+cout <<"Numarul nu este prim";
+return 0;
+}//
