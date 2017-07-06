@@ -42,7 +42,7 @@ Else return start
 	{
 		bool isPrim = true;
 		for (int div = 2; div <= number / 2; div++) // n/2 pt a se acoperi toti divizorii
-			if (number % div == 0)//catul impartirii
+			if (number % div == 0)//restul impartirii
 			{
 				isPrim = false;
 				break;
