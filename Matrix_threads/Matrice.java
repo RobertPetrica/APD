@@ -8,6 +8,8 @@ public class Matrice {
     static int[][] matrice2 = new int[3][3];
     static int[][] rezultat = new int[3][3];
     public static void main(String [] args){
+	    
+	    
         
         //creare elemente aleator
         Random rand = new Random();
@@ -65,7 +67,6 @@ public class Matrice {
             fir2.join();
             fir3.join();
         */
-            double startTime = System.currentTimeMillis();
 			Multiply multiply = new Multiply(numberOfRowsA,numberOfColumnsA,numberOfColumnsB);
 			List<Thread> threads = new ArrayList<>(numberOfThreads);
 
@@ -80,7 +81,7 @@ public class Matrice {
 			{
 				t.join();
 			}
-			System.out.println(((System.currentTimeMillis() - startTime) / 1000) + " seconds for matrix");
+			
         }
         catch (Exception e) {
             e.printStackTrace();
