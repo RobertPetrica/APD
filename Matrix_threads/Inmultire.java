@@ -1,33 +1,31 @@
 package matrix1;
 
-//Multiply Class
-class Inmultire extends Matrice {
-    
-    private int i;
-    private int j;
-    private int k;
-    
-    public Inmultire(int i, int j){
-        this.i=i;
-        this.j=j;
-        k=0;
-    }
-    
-    //inmultirea matricilor
-    public synchronized void multiplyMatrix(){
-        
-        int sum=0;
-        int a=0;
-        for(a=0;a<i;a++){
-            sum=0;
-            for(int b=0;b<j;b++){
-                sum+=matrice1[k][b]*matrice2[b][a];
-            }
-            rezultat[k][a]=sum;
-        }
-        
-        if(k>=i)
-            return;
-        k++;
-    }
+class Multiply extends MatrixMultiplication 
+{
+
+	private int numberOfRowsA;
+	private int numberOfColumnsB;
+	private int numberOfColumnsA;
+
+	public Multiply(int numberOfRowsA, int numberOfColumnsB, int numberOfColumnsA)
+	{
+		this.numberOfRowsA = numberOfRowsA;
+		this.numberOfColumnsB = numberOfColumnsB;
+		this.numberOfColumnsA = numberOfColumnsA;
+	}
+
+	public synchronized void multiplyMatrix()
+	{
+
+		for (int i = 0; i<numberOfRowsA; i++)
+		{
+			for (int j = 0; j<numberOfColumnsB; j++)
+			{
+				for (int k = 0; k<numberOfColumnsA; k++)
+				{
+					c[i][j] += a[i][k] * b[k][j];
+				}
+			}
+		}
+	}
 }
