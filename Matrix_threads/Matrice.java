@@ -4,13 +4,17 @@ import java.util.Random;
 public class Matrice {
     
     //creare matrici
-    static int[][] matrice1 = new int[3][3];
-    static int[][] matrice2 = new int[3][3];
-    static int[][] rezultat = new int[3][3];
-    public static void main(String [] args){
-	    
-	    
-        
+    
+	private static final int numberOfRowsA = 1000;
+	private static final int numberOfColumnsA = 1000;	
+	private static final int numberOfColumnsB = 1000;
+	private static final int numberOfThreads = 8;
+
+	static int[][] matrice1 = new [numberOfRowsA][numberOfColumnsA];
+	static int[][] matrice2 = new [numberOfColumnsA][numberOfColumnsB];
+	static int[][] rezultat = new [numberOfRowsA][numberOfColumnsB];
+        public static void main(String [] args){
+		
         //creare elemente aleator
         Random rand = new Random();
         
