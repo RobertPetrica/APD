@@ -8,7 +8,6 @@ public class Matrice {
 	private static final int numberOfRowsA = 1000;
 	private static final int numberOfColumnsA = 1000;	
 	private static final int numberOfColumnsB = 1000;
-	private static final int numberOfThreads = 8;
 
 	static int[][] matrice1 = new [numberOfRowsA][numberOfColumnsA];
 	static int[][] matrice2 = new [numberOfColumnsA][numberOfColumnsB];
