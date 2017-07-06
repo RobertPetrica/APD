@@ -43,7 +43,7 @@ public class Matrice {
             System.out.println();
         }
         try{
-            //Object of multiply Class
+           /* //Object of multiply Class
             Inmultire multiply = new Inmultire(3,3);
             
             //fire de executie
@@ -64,7 +64,23 @@ public class Matrice {
             fir1.join();
             fir2.join();
             fir3.join();
-            
+        */
+            double startTime = System.currentTimeMillis();
+			Multiply multiply = new Multiply(numberOfRowsA,numberOfColumnsA,numberOfColumnsB);
+			List<Thread> threads = new ArrayList<>(numberOfThreads);
+
+			for (int th = 0; th < numberOfThreads; th++) 
+			{
+				Thread t = new Thread(new MatrixMultiplier(multiply));
+				t.start();
+				threads.add(t);
+			}
+
+			for (Thread t : threads) 
+			{
+				t.join();
+			}
+			System.out.println(((System.currentTimeMillis() - startTime) / 1000) + " seconds for matrix");
         }
         catch (Exception e) {
             e.printStackTrace();
