@@ -77,13 +77,13 @@ public class Matrice {
 			{
 				Thread t = new Thread(new MatrixMultiplier(multiply));
 				t.start();
-				threads.add(t);
+				
 			}
 
-			for (Thread t : threads) 
-			{
+			
+			
 				t.join();
-			}
+			
 			
         }
         catch (Exception e) {
