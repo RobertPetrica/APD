@@ -87,7 +87,7 @@ public class Matrice {
 			
         }
         catch (Exception e) {
-            e.printStackTrace();
+          
         }
         //afisarea rezultatului
         System.out.println("\n\nRezultat:");
