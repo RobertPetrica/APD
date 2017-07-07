@@ -71,7 +71,7 @@ public class Matrice {
             fir3.join();
         */
 			MatrixMultiplier multiply = new Inmultire(numberOfRowsA,numberOfColumnsA,numberOfColumnsB);
-			List<Thread> threads = new ArrayList<>(numberOfThreads);
+			List<Thread> threads = new List<>(numberOfThreads);
 
 			for (int th = 0; th < numberOfThreads; th++) 
 			{
